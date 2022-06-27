@@ -1,11 +1,12 @@
-export interface PropTasks {
+export interface Task {
     id: string;
-    title: string;
+    name: string;
     status: boolean;
+    createdAt: Date;
 }
 
 export interface PropsDbTasks {
     id: string;
     day: Date;
-    tasks: PropTasks[];
-  }
+    tasks: Task[];
+}

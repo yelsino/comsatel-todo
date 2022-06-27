@@ -1,10 +1,18 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { InputText } from "../../components/Atoms/InputText"
 import { SubTitle } from "../../components/Atoms/SubTitle"
 import Header from "../Dashboard/OwnComponents/Header"
 import { ItemTask } from "./OwnComponents/ItemTask"
 
 export const Tasks = () => {
+
+  const [tasks, setTasks] = useState([])
+
+  useEffect(() => {
+    fetch('http://localhost:8080/tasks')
+      .then(response => response.json())
+      .then(json => setTasks(json))
+  }, [])
 
   return (
     <div className="flex flex-col gap-y-5">
@@ -16,8 +24,8 @@ export const Tasks = () => {
         <SubTitle text="Tareas pendientes" />
         <div className="flex flex-col gap-y-2 overflow-y-scroll h-[calc(100vh-400px)]">
           {
-            Array(10).fill(0).map((_, index) => (
-              <ItemTask key={index} task={{ text: 'lorem lorem lorem', status: false, id: '321' }} />
+            tasks.map((task, index) => (
+              <ItemTask key={index} task={task} />
             ))
           }
         </div>

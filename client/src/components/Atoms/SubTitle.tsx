@@ -5,6 +5,6 @@ interface Props {
 
 export const SubTitle = ({ text }: Props) => {
     return (
-        <div className='font-poppins text-xl text-gray-600 text-secondary-200'>{text}</div>
+        <div className='font-poppins text-lg text-gray-600 text-secondary-200'>{text}</div>
     )
 }
