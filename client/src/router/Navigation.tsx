@@ -1,8 +1,9 @@
-import { Suspense } from "react";
-import { BrowserRouter, Link, Navigate, Route, Routes } from "react-router-dom";
+import { Suspense, } from "react";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { routes } from "./routes";
 
 export const Navigation = () => {
+
   return (
     <Suspense fallback={<p>cargando...</p>}>
       <BrowserRouter>

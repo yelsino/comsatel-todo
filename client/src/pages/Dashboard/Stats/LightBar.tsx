@@ -1,5 +1,5 @@
-import moment from "moment"
 import { Task } from "../../../interfaces/Tasks"
+import { formatDate } from "../../../utils/formatDate"
 
 interface Props {
     tasksToday: Task[]
@@ -52,7 +52,8 @@ const LightBar = ({ tasksToday, date }: Props) => {
                     height: `${printTotalPixel(finished)}px`,
                 }}
             />
-            <span className="text-text-100">{moment(date).format('dddd').substring(0, 2)}</span>
+            <span className="text-text-100">{formatDate(date, 'dddd').substring(0, 2)}</span>
+
         </div>
     )
 

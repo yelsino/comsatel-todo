@@ -2,6 +2,7 @@
 import moment from "moment";
 import { useEffect, useState } from "react";
 import { SubTitle } from "../../../components/Atoms/SubTitle";
+import { useStats } from "../../../hooks/useStats";
 import { Task } from "../../../interfaces/Tasks";
 import { ItemStats } from "./ItemStats";
 import { MyActivity } from "./MyActivity";
@@ -12,35 +13,7 @@ interface Props {
 
 export const Stats = ({ tasks }: Props) => {
 
-  const [total, setTotal] = useState(0);
-  const [missing, setMissing] = useState(0);
-  const [finished, setFinished] = useState(0);
-
-  const getTotalTasks = () => {
-    setTotal(tasks.length);
-  }
-
-  const formatDate = (date: Date) => moment(date).format('L')
-
-  const getMissingTasks = () => {
-    const missingTasks = tasks.filter(({ status, createdAt }) => {
-      return formatDate(new Date()) === formatDate(createdAt) && status === false;
-    });
-    setMissing(missingTasks.length);
-  }
-
-  const getFinishedTasks = () => {
-    const finishTasks = tasks.filter(({ status, createdAt }) => {
-      return formatDate(new Date()) === formatDate(createdAt) && status === true;
-    });
-    setFinished(finishTasks.length);
-  }
-
-  useEffect(() => {
-    getTotalTasks();
-    getMissingTasks();
-    getFinishedTasks();
-  }, [tasks])
+  const { total, missing, finished, tasksByDays } = useStats({ tasks });
 
   return (
     <div className="flex flex-col gap-y-5">
@@ -53,7 +26,7 @@ export const Stats = ({ tasks }: Props) => {
         <ItemStats number={missing} text={'pendientes'} />
         <ItemStats number={finished} text={'finalizadas'} />
 
-        <MyActivity tasks={tasks} />
+        <MyActivity tasksByDays={tasksByDays} />
       </div>
     </div>
   );

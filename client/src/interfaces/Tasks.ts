@@ -1,8 +1,9 @@
 export interface Task {
-    id: string;
+    id?: string;
     name: string;
     status: boolean;
-    createdAt: Date;
+    createdAt?: Date | string;
+    updatedAt?: Date | string;
 }
 
 export interface PropsDbTasks {

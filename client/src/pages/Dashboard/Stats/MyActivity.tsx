@@ -3,23 +3,10 @@ import { Task } from "../../../interfaces/Tasks";
 import LightBar from "./LightBar";
 
 interface Props {
-  tasks: Task[];
+  tasksByDays: [string, Task[]][]
 }
 
-export const MyActivity = ({ tasks }: Props) => {
-
-  const formatDate = (date: Date) => moment(date).format('L')
-
-  // separate tasks by days 
-  const tasksByDays = tasks.reduce((acc, task) => {
-    const date = formatDate(task.createdAt)
-    if (!acc[date]) {
-      acc[date] = []
-    }
-    acc[date].push(task)
-    return acc
-  }, {} as { [key: string]: Task[] })
-
+export const MyActivity = ({ tasksByDays }: Props) => {
 
   // select the last 7 days of tasksByDays
   return (
@@ -29,15 +16,15 @@ export const MyActivity = ({ tasks }: Props) => {
         <span>My</span>
         <span>Activity</span>
       </div>
-      <div className={`flex gap-x-3 text-xs ${tasks.length >= 1 ? 'justify-start' : 'justify-center'}   w-full`}>
+      <div className={`flex gap-x-3 text-xs ${tasksByDays.length >= 1 ? 'justify-start' : 'justify-center'}   w-full`}>
         {
-          Object.entries(tasksByDays).slice(-7).map(([date, tasks]) => {
+          tasksByDays.slice(-7).map(([date, tasks]) => {
             return (
               <LightBar key={date} tasksToday={tasks} date={date} />
             )
           })
         }
-        {tasks.length === 0 && (
+        {tasksByDays.length === 0 && (
           <p className="text-text-200 text-center font-poppins text-base">Ningúna tarea</p>
         )}
 
