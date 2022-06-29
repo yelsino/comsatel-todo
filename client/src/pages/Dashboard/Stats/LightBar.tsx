@@ -1,6 +1,5 @@
 import moment from "moment"
 import { Task } from "../../../interfaces/Tasks"
-import { formatDate } from "../../../utils/formatDate"
 
 interface Props {
     tasksToday: Task[]
@@ -38,8 +37,6 @@ const LightBar = ({ tasksToday, date }: Props) => {
         return Math.round(percentFinished)
     }
 
-
-
     return (
         <div className="flex flex-col items-center  w-3 ">
             <div className="flex flex-col bg-primary-200 rounded-full">
@@ -47,7 +44,6 @@ const LightBar = ({ tasksToday, date }: Props) => {
                     style={{
                         height: `${printTotalPixel(missing)}px`,
                     }}
-
                 />
                 <span className={`b bg-secondary-100 w-3  rounded-full`}
                     style={{

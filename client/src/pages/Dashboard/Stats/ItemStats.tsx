@@ -10,7 +10,6 @@ export const ItemStats = ({ number, text, icon }: Props) => {
   return (
     <div className=" rounded-full p-3 bg-primary-100">
       <div className="flex items-center gap-x-2 flex-col gap-y-2">
-
         {
           icon ? <span className="text-orange-500"><IconFire /></span> : null
         }

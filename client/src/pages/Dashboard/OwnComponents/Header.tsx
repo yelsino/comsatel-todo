@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-// import imgAlexis from "../assets/alexi.jpg";
 
 interface Props {
   text?: string | JSX.Element
@@ -16,8 +15,6 @@ function Header({ text, link }: Props) {
         <span className="bg-secondary-100 w-1 h-1 absolute rounded-full bottom-5 right-5"></span>
         <span className="bg-secondary-100 w-1 h-1 absolute rounded-full bottom-5 left-5"></span>
       </Link>
-
-      {/* <img className="w-14 h-14 object-cover rounded-2xl" src={imgAlexis} /> */}
     </div>
   )
 }

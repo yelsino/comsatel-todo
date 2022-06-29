@@ -3,7 +3,6 @@ import React, { useContext, useEffect, useRef, useState } from 'react'
 import { TaskContext } from '../../context';
 import { IconClose } from './Icons'
 
-
 export const InputText = () => {
 
     const [text, setText] = useState("");
@@ -57,7 +56,6 @@ export const InputText = () => {
         }
     }, [text])
 
-
     return (
         <>
             <motion.div layout className='flex flex-col gap-y-3'>
@@ -70,7 +68,7 @@ export const InputText = () => {
                         className="px-5 py-3 outline-none rounded-lg w-full"
                         value={text}
                         onChange={handleChange} />
-                    {text && <motion.button layout
+                    {text && <motion.button
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}

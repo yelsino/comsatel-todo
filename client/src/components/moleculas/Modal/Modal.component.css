@@ -26,10 +26,8 @@
   padding: 50px;
   box-sizing: border-box;
   border-radius: 10px;
-  /* background-color: white; */
   cursor: auto;
 }
-
 
 
 .modal__content {
@@ -49,10 +47,3 @@
 .modal__close:hover {
   transform: rotate(180deg);
 }
-
-/* @media screen and (min-width: 800px) {
-  .modal__box {
-    max-width: 600px;
-    margin: 0 30px;
-  }
-} */

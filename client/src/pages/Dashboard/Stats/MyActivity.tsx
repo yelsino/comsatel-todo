@@ -33,8 +33,6 @@ export const MyActivity = ({ tasksByDays }: Props) => {
             <LightBar key={date} tasksToday={tasks} date={date} />
           ))
         }
-
-
       </div>
     </div>
   );

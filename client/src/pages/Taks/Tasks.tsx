@@ -1,5 +1,6 @@
 import { LayoutGroup, motion } from "framer-motion"
-import { MouseEventHandler, useContext, useState } from "react"
+import { useContext, useState } from "react"
+import { ButtonAction } from "../../components/Atoms/ButtonAction"
 import { InputText } from "../../components/Atoms/InputText"
 import { SubTitle } from "../../components/Atoms/SubTitle"
 import { Modal } from "../../components/moleculas/Modal/Modal"
@@ -22,15 +23,12 @@ export const Tasks = () => {
 
   const toggleModal = () => setModalState(!isModalOpen);
 
-
-  const handlerDeleteTask: MouseEventHandler<HTMLButtonElement> = () => {
+  const handlerDeleteTask = () => {
     // @ts-ignore: Unreachable code error
     deleteTask(confirmTask)
     toggleModal()
     selectConfirmTask(null)
   }
-
-
 
   return (
     <div className="flex flex-col gap-y-5">
@@ -60,8 +58,8 @@ export const Tasks = () => {
 
               {
                 todayTasks.length === 0 &&
-                <div className="text-center text-text-100">
-                  No hay ninuna tarea pendiente, recuerda que todas las tareas creadas serán archivadas a las 12:00 pm
+                <div className=" text-text-200">
+                  No hay ninuna tarea pendiente, recuerda que todas las tareas creadas hoy, serán archivadas a las 12:00 pm
                 </div>
               }
             </div>
@@ -76,16 +74,15 @@ export const Tasks = () => {
         onClose={toggleModal}
       >
         <div className="flex gap-x-5">
-          <button
+          <ButtonAction
             onClick={handlerDeleteTask}
-            className="bg-primary-100 text-text-100 px-5 py-3 rounded-full hover:shadow-xl hover:bg-secondary-100 font-semibold transition ease-in-out duration-500 ">
-            Eliminar
-          </button>
-          <button
+            text="Eliminar"
+          />
+          <ButtonAction
             onClick={toggleModal}
-            className="bg-primary-100 text-text-100 px-5 py-3 rounded-full hover:shadow-xl hover:bg-secondary-100 font-semibold transition ease-in-out duration-500 ">
-            Cancelar
-          </button>
+            text="Cancelar"
+          />
+
         </div>
       </Modal>
 
