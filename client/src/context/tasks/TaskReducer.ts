@@ -29,17 +29,17 @@ export const taskReducer = (state: TaskState, action: TaskAction): TaskState => 
         case 'CREATE_TASK':
             return {
                 ...state,
-                todayTasks: [action.payload, ...state.todayTasks,]
+                todayTasks: [action.payload, ...state.todayTasks,],
             }
         case 'UPDATE_TASK':
             return {
                 ...state,
-                todayTasks: state.todayTasks.map(task => task.id === action.payload.id ? action.payload : task)
+                todayTasks: state.todayTasks.map(task => task.id === action.payload.id ? action.payload : task),
             }
         case 'DELETE_TASK':
             return {
                 ...state,
-                todayTasks: state.todayTasks.filter(task => task.id !== action.payload.id)
+                todayTasks: state.todayTasks.filter(task => task.id !== action.payload.id),
             }
 
         case 'SELECT_TASK':
@@ -53,7 +53,6 @@ export const taskReducer = (state: TaskState, action: TaskAction): TaskState => 
                 ...state,
                 confirmTask: action.payload
             }
-
 
         default:
             return state;

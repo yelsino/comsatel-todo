@@ -1,3 +1,4 @@
+import moment from "moment"
 import { Task } from "../../../interfaces/Tasks"
 import { formatDate } from "../../../utils/formatDate"
 
@@ -40,19 +41,21 @@ const LightBar = ({ tasksToday, date }: Props) => {
 
 
     return (
-        <div className="flex flex-col items-center">
-            <span className={`b bg-primary-200 w-3  rounded-full`}
-                style={{
-                    height: `${printTotalPixel(missing)}px`,
-                }}
+        <div className="flex flex-col items-center  w-3 ">
+            <div className="flex flex-col bg-primary-200 rounded-full">
+                <span className={`b bg-primary-200 w-3  rounded-full`}
+                    style={{
+                        height: `${printTotalPixel(missing)}px`,
+                    }}
 
-            />
-            <span className={`b bg-secondary-100 w-3  rounded-full`}
-                style={{
-                    height: `${printTotalPixel(finished)}px`,
-                }}
-            />
-            <span className="text-text-100">{formatDate(date, 'dddd').substring(0, 2)}</span>
+                />
+                <span className={`b bg-secondary-100 w-3  rounded-full`}
+                    style={{
+                        height: `${printTotalPixel(finished)}px`,
+                    }}
+                />
+            </div>
+            <span className="text-text-100 mt-1">{moment(date).format('dddd').substring(0, 2)}</span>
 
         </div>
     )

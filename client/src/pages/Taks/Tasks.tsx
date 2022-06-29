@@ -39,7 +39,7 @@ export const Tasks = () => {
       <LayoutGroup>
         <motion.div
           layout
-          className="flex flex-col gap-y-3"
+          className="flex flex-col gap-y-3 "
         >
           <InputText />
           <div className="w-full flex flex-col gap-y-2 text-text-100">
@@ -56,6 +56,13 @@ export const Tasks = () => {
                     selectConfirmTask={selectConfirmTask}
                   />
                 ))
+              }
+
+              {
+                todayTasks.length === 0 &&
+                <div className="text-center text-text-100">
+                  No hay ninuna tarea pendiente, recuerda que todas las tareas creadas serán archivadas a las 12:00 pm
+                </div>
               }
             </div>
 

@@ -29,6 +29,20 @@ export const TaskProvider = ({ children }: Props) => {
 
     const [state, dispatch] = useReducer(taskReducer, INITIAL_STATE)
 
+    const getAllTasks = () => {
+        taskApi.get('/').then(res => {
+            dispatch({
+                type: 'GET_ALL_TASKS',
+                payload: res.data
+            })
+
+            dispatch({
+                type: 'GET_TASKS_TODAY',
+                payload: getTasksToday(res.data)
+            })
+        })
+    }
+
     // tareas faltantes de hoy
     const getTasksToday = (tasks: Task[]) => {
         const missingTasks = tasks.filter(({ createdAt }) => {
@@ -40,16 +54,20 @@ export const TaskProvider = ({ children }: Props) => {
     const createTask = async (task: Task) => {
         const newTask = await taskApi.post('/', task);
         dispatch({ type: 'CREATE_TASK', payload: newTask.data });
+        getAllTasks()
+
     }
 
     const updateTask = async (task: Task) => {
         const updatedTask = await taskApi.put(`/${task.id}`, task);
         dispatch({ type: 'UPDATE_TASK', payload: updatedTask.data });
+        getAllTasks()
     }
 
     const deleteTask = async (task: Task) => {
         await taskApi.delete(`/${task.id}`);
         dispatch({ type: 'DELETE_TASK', payload: task });
+        getAllTasks()
     }
 
     const selectTask = (task: Task | null) => {
@@ -62,17 +80,7 @@ export const TaskProvider = ({ children }: Props) => {
 
 
     useEffect(() => {
-        taskApi.get('/').then(res => {
-            dispatch({
-                type: 'GET_ALL_TASKS',
-                payload: res.data
-            })
-
-            dispatch({
-                type: 'GET_TASKS_TODAY',
-                payload: getTasksToday(res.data)
-            })
-        })
+        getAllTasks()
     }, [])
 
     return (

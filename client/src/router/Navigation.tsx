@@ -5,7 +5,7 @@ import { routes } from "./routes";
 export const Navigation = () => {
 
   return (
-    <Suspense fallback={<p>cargando...</p>}>
+    <Suspense fallback={<div className="max-w-sm mx-auto p-10  w-full  sm:h-[calc(100vh-100px)] sm:rounded-3xl flex flex-col gap-y-7 relative bg-primary bg-primary-200 "></div>}>
       <BrowserRouter>
         <div className="max-w-sm mx-auto p-10  w-full  sm:h-[calc(100vh-100px)] sm:rounded-3xl flex flex-col gap-y-7 relative bg-primary bg-primary-200 ">
           <Routes>
