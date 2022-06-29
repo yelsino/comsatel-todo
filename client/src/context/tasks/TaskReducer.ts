@@ -10,6 +10,8 @@ export type TaskAction =
     | { type: 'UPDATE_TASK'; payload: Task }
     | { type: 'SELECT_TASK'; payload: Task | null }
     | { type: 'CONFIRM_TASK'; payload: Task | null }
+    | { type: 'CLEAN_TABLE_TASK'; payload: string }
+    | { type: 'IS_LOADING'; payload: boolean }
 
 
 export const taskReducer = (state: TaskState, action: TaskAction): TaskState => {
@@ -18,7 +20,6 @@ export const taskReducer = (state: TaskState, action: TaskAction): TaskState => 
         case 'GET_ALL_TASKS':
             return {
                 ...state,
-                isLoading: true,
                 tasks: action.payload
             }
         case 'GET_TASKS_TODAY':
@@ -52,6 +53,23 @@ export const taskReducer = (state: TaskState, action: TaskAction): TaskState => 
             return {
                 ...state,
                 confirmTask: action.payload
+            }
+
+        case 'IS_LOADING':
+            return {
+                ...state,
+                isLoading: action.payload
+            }
+
+        case 'CLEAN_TABLE_TASK':
+            return {
+                ...state,
+                isLoading: false,
+                message: action.payload,
+                tasks: [],
+                todayTasks: [],
+                selectedTask: null,
+                confirmTask: null,
             }
 
         default:

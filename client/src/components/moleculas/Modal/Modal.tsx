@@ -5,13 +5,14 @@ import './Modal.component.css';
 
 interface ModalProps {
   title: string;
+  message?: string
   isOpen: boolean;
   onClose: () => void;
   children?: | JSX.Element
   | JSX.Element[]
 }
 
-export const Modal: React.FC<ModalProps> = ({ title, isOpen, onClose, children }) => {
+export const Modal: React.FC<ModalProps> = ({ title, isOpen, onClose, children, message }) => {
   const outsideRef = React.useRef(null);
 
   const handleCloseOnOverlay = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
@@ -34,8 +35,9 @@ export const Modal: React.FC<ModalProps> = ({ title, isOpen, onClose, children }
         >
           <img src={iconX} alt={'close'} />
         </button>
-        <div className={'text-3xl font-poppins text-secondary-100'}>
-          {title}
+        <div className='flex flex-col gap-y-1'>
+          <p className='text-3xl font-poppins text-secondary-100'>{title}</p>
+          <p className='text-text-100 font-poppins font-extralight'>{message}</p>
         </div>
         <div className={'modal__content'}>
           {children}

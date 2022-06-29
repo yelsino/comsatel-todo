@@ -11,14 +11,17 @@ export interface TaskState {
     todayTasks: Task[],
     selectedTask: Task | null,
     confirmTask: Task | null,
+    message: string
 }
 
 const INITIAL_STATE: TaskState = {
-    isLoading: true,
+    isLoading: false,
     tasks: [],
     todayTasks: [],
     selectedTask: null,
     confirmTask: null,
+    message: ''
+
 }
 
 interface Props {
@@ -70,6 +73,15 @@ export const TaskProvider = ({ children }: Props) => {
         getAllTasks()
     }
 
+    const cleanTableTask = async (): Promise<boolean> => {
+        dispatch({ type: 'IS_LOADING', payload: true });
+        const res = await taskApi.delete('/clean');
+        // console.log(res);
+
+        dispatch({ type: 'CLEAN_TABLE_TASK', payload: res.data });
+        return res.status === 200 ? true : false;
+    }
+
     const selectTask = (task: Task | null) => {
         dispatch({ type: 'SELECT_TASK', payload: task });
     }
@@ -77,6 +89,8 @@ export const TaskProvider = ({ children }: Props) => {
     const selectConfirmTask = (task: Task | null) => {
         dispatch({ type: 'CONFIRM_TASK', payload: task });
     }
+
+
 
 
     useEffect(() => {
@@ -91,7 +105,8 @@ export const TaskProvider = ({ children }: Props) => {
             updateTask,
             deleteTask,
             selectTask,
-            selectConfirmTask
+            selectConfirmTask,
+            cleanTableTask
         }}>
             {children}
         </TaskContext.Provider>
