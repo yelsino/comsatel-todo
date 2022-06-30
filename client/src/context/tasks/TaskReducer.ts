@@ -2,7 +2,7 @@ import { Task } from "../../interfaces/Tasks";
 import { TaskState } from "./TaskProvider";
 
 export type TaskAction =
-    | { type: 'GET_TASKS_TODAY'; payload: Task[] }
+    { type: 'GET_TASKS_TODAY'; payload: Task[] }
     | { type: 'GET_ALL_TASKS'; payload: Task[] }
     | { type: 'CREATE_TASK'; payload: Task }
     | { type: 'DELETE_TASK'; payload: Task }

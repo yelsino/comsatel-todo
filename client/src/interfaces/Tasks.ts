@@ -6,8 +6,3 @@ export interface Task {
     updatedAt?: Date | string;
 }
 
-export interface PropsDbTasks {
-    id: string;
-    day: Date;
-    tasks: Task[];
-}

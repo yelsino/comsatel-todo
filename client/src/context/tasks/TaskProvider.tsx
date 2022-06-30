@@ -1,9 +1,9 @@
 import { useEffect, useReducer } from "react"
 import taskApi from "../../apis/taskApi";
 import { Task } from "../../interfaces/Tasks";
-import { formatDate } from "../../utils/formatDate";
-import { TaskContext } from "./TaskContext"
+import { TaskContext } from "./TaskContext";
 import { taskReducer } from "./TaskReducer";
+import moment from "moment";
 
 export interface TaskState {
     isLoading: boolean;
@@ -49,7 +49,7 @@ export const TaskProvider = ({ children }: Props) => {
     // tareas faltantes de hoy
     const getTasksToday = (tasks: Task[]) => {
         const missingTasks = tasks.filter(({ createdAt }) => {
-            return formatDate(new Date(), 'L') === formatDate(createdAt as Date, 'L');
+            return moment(new Date()).format('L') === moment(createdAt).format('L')
         });
         return missingTasks;
     }
@@ -105,7 +105,8 @@ export const TaskProvider = ({ children }: Props) => {
             selectTask,
             selectConfirmTask,
             cleanTableTask
-        }}>
+        }}
+        >
             {children}
         </TaskContext.Provider>
     )

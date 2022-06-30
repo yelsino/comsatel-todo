@@ -8,7 +8,7 @@ import { TaskContext } from "../../context"
 import Header from "../Dashboard/OwnComponents/Header"
 import { ItemTask } from "./OwnComponents/ItemTask"
 
-export const Tasks = () => {
+const Tasks = () => {
 
   const {
     todayTasks,

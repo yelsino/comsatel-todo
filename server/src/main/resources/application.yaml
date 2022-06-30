@@ -1,7 +1,7 @@
 spring:
   main.banner-mode: off
   datasource:
-    url: jdbc:mysql://b8xwx9ok737a.us-east-3.psdb.cloud/learningdb1?serverTimezone=UTC&user=jnf0eq5gna15&password=pscale_pw_XtkUW3unXvznQYnTCZLLGpohVRPsnxEILumdjb_DmrE
+    url: jdbc:mysql://$HOST_BD/learningdb1?serverTimezone=UTC&user=$USER_BD&password=$PASSWORD_BD
     tomcat.connection-properties: useUnicode=true;characterEncoding=utf-8;
   sql.init.mode: always
 
@@ -17,22 +17,3 @@ spring:
 server:
   port: 8004
   error.include-message: always
-
-# spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-# spring.datasource.url=jdbc:mysql://b8xwx9ok737a.us-east-3.psdb.cloud/learningdb1
-# spring.datasource.username=nliwf2whs41c
-# spring.datasource.password=pscale_pw_lnGq88ajeT9PiZU91tNRXYRRH2GMDo0uCz4JvyE9rn4
-# spring.jpa.hibernate.ddl-auto=create-only
-# spring.datasource.data=classpath:data.sql
-
-# spring.datasource.url=jdbc:mysql://b8xwx9ok737a.us-east-3.psdb.cloud/learningdb1?serverTimezone=UTC
-# spring.datasource.username=nliwf2whs41c
-# spring.datasource.password=pscale_pw_lnGq88ajeT9PiZU91tNRXYRRH2GMDo0uCz4JvyE9rn4
-# spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-# spring.jpa.database-platform=org.hibernate.dialect.MySQL57InnoDBDialect
-# spring.jpa.hibernate.ddl-auto=create
-# logging.level.org.hibernate.SQL=debug
-# spring.servlet.multipart.max-file-size=10MB
-# spring.servlet.multipart.max-request-size=10MB
-# spring.datasource.tomcat.connection-properties=useUnicode=true;characterEncoding=utf-8;
-# # server.port=8004

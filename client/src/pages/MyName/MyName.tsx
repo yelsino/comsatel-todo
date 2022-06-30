@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export const MyName = () => {
+const MyName = () => {
 
     // register name in local storage
     const [name, setName] = useState("");

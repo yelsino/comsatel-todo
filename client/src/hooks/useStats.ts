@@ -1,6 +1,6 @@
+import moment from "moment";
 import { useEffect, useState } from "react";
 import { Task } from "../interfaces/Tasks";
-import { formatDate } from "../utils/formatDate";
 
 interface Props {
     tasks: Task[];
@@ -19,7 +19,7 @@ export const useStats = ({ tasks }: Props) => {
     // tareas faltantes de hoy
     const getMissingTasksToday = () => {
         const missingTasks = tasks.filter(({ status, createdAt }) => {
-            return formatDate(new Date(), 'L') === formatDate(createdAt as Date, 'L') && status === false;
+            return moment(new Date()).format('L') === moment(createdAt).format('L') && status === false;
         });
         setMissing(missingTasks.length);
     }
@@ -27,7 +27,7 @@ export const useStats = ({ tasks }: Props) => {
     // tareas completadas de hoy
     const getFinishedTasksToday = () => {
         const finishTasks = tasks.filter(({ status, createdAt }) => {
-            return formatDate(new Date(), 'L') === formatDate(createdAt as Date, 'L') && status === true;
+            return moment(new Date()).format('L') === moment(createdAt).format('L') && status === true;
         });
         setFinished(finishTasks.length);
     }
@@ -35,7 +35,7 @@ export const useStats = ({ tasks }: Props) => {
     // tareas organizadas por dias [day:'', tasks: []][]
     const tasksByDays = Object.entries(
         tasks.reduce((acc, task) => {
-            const date = formatDate(task.createdAt as Date, 'L')
+            const date = moment(new Date()).format('L')
             if (!acc[date]) {
                 acc[date] = []
             }

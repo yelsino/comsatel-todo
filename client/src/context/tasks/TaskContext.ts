@@ -2,7 +2,7 @@ import { createContext } from "react";
 import { Task } from "../../interfaces/Tasks";
 import { TaskAction } from "./TaskReducer";
 
-export interface TaskContextProps {
+interface TaskContextProps {
     isLoading: boolean;
     tasks: Task[];
     todayTasks: Task[];

@@ -8,7 +8,7 @@ interface ModalProps {
   message?: string
   isOpen: boolean;
   onClose: () => void;
-  children?: | JSX.Element
+  children?: JSX.Element
   | JSX.Element[]
 }
 
