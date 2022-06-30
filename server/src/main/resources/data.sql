@@ -1,0 +1,58 @@
+INSERT INTO task
+    (name, status,created_at, updated_at )
+VALUES
+    ('Lavar los platos y/o poner el lavaplatos' ,1 ,'22/05/01' ,'22/05/20'),
+    ('Sacar la basura' ,1 ,'22/05/20' ,'22/05/20' ),
+    ('Barrer la cocina' ,1 ,'22/05/20' ,'22/05/20' ),
+
+    ('Limpiar la mesa de la cocina', 1,'22/05/21','22/05/21' ),
+    ('Levantar el desorden de las áreas comunes', 1,'22/05/21','22/05/21' ),
+    ('Revisar el baño (toallas en orden, que haya papel, crema dental, jabones)', 0,'22/05/21','22/05/21' ),
+    ('Revisar el correo', 1,'22/05/21','22/05/21' ),
+    ('Revisar las habitaciones de los niños', 1,'22/05/21','22/05/21' ),
+    ('Despejar escritorio', 1,'22/05/21','22/05/21' ),
+    ('Guardar juguetes', 1,'22/05/21','22/05/21' ),
+    ('Elegir ropa para el día siguiente', 0,'22/05/21','22/05/21' ),
+    ('Hacer ejercicio', 1,'22/05/21','22/05/21' ),
+    ('Regar las plantas', 1,'22/05/21','22/05/21' ),
+    ('Alimentar y asear mascotas', 1,'22/05/21','22/05/21' ),
+    ('Pasear mascotas', 1,'22/05/21','22/05/21' ),
+    ('Tomar pastillas / vitaminas', 1,'22/05/21','22/05/21' ),
+
+    ('Cocinar', 1,'22/05/03','22/05/22' ),
+    ('Actualizar calendario', 1,'22/05/22','22/05/22' ),
+    ('La ACTIVIDAD de la semana', 1,'22/05/22','22/05/22' ),
+    ('Limpieza general del piso (barrer y/o aspirar bien, trapear, etc.)', 1,'22/05/22','22/05/22' ),
+    ('Limpieza general del baño', 0,'22/05/22','22/05/22' ),
+    ('Limpieza de espejos y ventanas', 0,'22/05/22','22/05/22' ),
+    ('Planchar ropa', 0,'22/05/22','22/05/22' ),
+
+    ('Lavar ropa (poner lavadora, secar la ropa, doblar y guardar la ropa)', 0,'22/05/23','22/05/23' ),
+    ('Actividad a elegir (tiene que hacerse en un mes)', 1,'22/05/23','22/05/23' ),
+    ('Limpiar el refrigerador, el microondas y el horno', 1,'22/05/23','22/05/23' ),
+    ('Limpiar paredes, puertas y molduras', 0,'22/05/23','22/05/23' ),
+    ('Limpiar los muebles', 1,'22/05/23','22/05/23' ),
+    ('Limpiar sillones, cojines y alfombras', 1,'22/05/23','22/05/23' ),
+
+    ('Aspirar', 1,'22/05/06','22/05/24' ),
+    ('Limpiar el polvo', 1,'22/05/24','22/05/24' ),
+    ('Limpiar vidrios y espejos', 1,'22/05/24','22/05/24' ),
+    ('Limpieza general de baños', 1,'22/05/24','22/05/24' ),
+    ('Limpieza general de la cocina', 1,'22/05/24','22/05/24' ),
+    ('Organizar el bolso', 1,'22/05/24','22/05/24' ),
+    ('Cortar el césped', 1,'22/05/24','22/05/24' ),
+    ('Cuidar jardín (recortar hojas, ramas, fertilizante, etc.)', 1,'22/05/24','22/05/24' ),
+    ('Planchar ropa', 1,'22/05/24','22/05/24' ),
+    ('Hacer diligencias', 1,'22/05/24','22/05/24' ),
+    ('Devolver llamadas', 0,'22/05/24','22/05/24' ),
+    ('Planificar comidas', 1,'22/05/24','22/05/24' ),
+
+    ('Cambiar sábanas', 1,'22/05/25','22/05/25' ),
+    ('Cambiar toallas', 1,'22/05/25','22/05/25' ),
+    ('Despejar entrada', 1,'22/05/25','22/05/25' ),
+
+    ('Bañar mascotas', 1,'22/05/26','22/05/26' ),
+    ('Lavar el carro', 1,'22/05/26','22/05/26' ),
+    ('Triturar documentos (puede hacerse también mensual)', 1,'22/05/26','22/05/26' ),
+    ('Limpieza en seco', 1,'22/05/26','22/05/26' ),
+    ('Triturar documentos', 1,'22/05/26','22/05/26' );
