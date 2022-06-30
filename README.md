@@ -17,11 +17,6 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
@@ -125,7 +120,6 @@ Para el desarrollo de este proyecto se utilizo lenguajes deprogramacion, framewo
 Para obtener una copia del proyecto localmente, debe seguir estos pasos
 
 ### Pre requisitos
-
 Para poder compilar el proyecto, asegurese tener instalado lo siguiente:
 
 * [Nodejs](https://nodejs.org/es/) -- Escoja una version LTS
@@ -135,7 +129,7 @@ Para poder compilar el proyecto, asegurese tener instalado lo siguiente:
 Ejecute esto en su terminal
 * npm
   ```sh
-  npm install npm@latest -g
+  npm install --global yarn
   ```
 
 ### Instalación del proyeco
@@ -147,14 +141,30 @@ _Aqui los pasos para ejecutar el proyecoto._
    ```sh
    git clone https://github.com/yelsino/comsatel-todo.git
    ```
-3. Instala los paquetes yarn del proyecto,
+### Ejecucion del front-end
+_Abra el proyecto clonado en su editor de preferencia y dirigete a la carpeta CLIENT desde cualquier terminal de consola._
+1. Ejecuta el siguiente comando en CLIENT
    ```sh
    yarn install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+2. Una vez instalada las dependecnias 
+   ```sh
+   yarn dev
    ```
+3. Dirigete a la ruta creada por el empaquetador VITEjs ej: http://localhost:3000/
+
+### Ejecucion del back-end
+_Abra el proyecto clonado en su editor de preferencia y dirigete a la carpeta CLIENT desde cualquier terminal de consola._
+1. Ejecuta el siguiente comando en CLIENT
+   ```sh
+   mvn clean install
+   ```
+2. Una vez instalada las dependecnias 
+   ```sh
+   mvnw.cmd spring-boot:run
+   ```
+3. Dirigete a la ruta creada por spring-boot ej: http://localhost:8080
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -167,95 +177,34 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Yelsiño - [gmail](yelsino321@gmail.com) - email@example.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Repositorio Link: [https://github.com/yelsino/comsatel-todo.git](https://github.com/yelsino/comsatel-todo.git)
+Proyecto Link: [https://comsatel-tasks.web.app](https://comsatel-tasks.web.app/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+## EXPRESIONES DE GRATITUD
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+Gracias a estas librerias pude construir este proyecto!
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+* [Framer Motion](https://www.framer.com/motion/)
+* [Hero Icons](https://heroicons.com/)
+* [React Router Dom](https://reactrouter.com/)
+* [Reactjs](https://es.reactjs.org/)
 
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
+
+[linkedin-url]: https://www.linkedin.com/in/yelsin-caso-alanya-511824210/
 [product-screenshot]: https://res.cloudinary.com/dwkfj5sxb/image/upload/v1656607041/mobile-comsatel-task_tbt8uq.png
