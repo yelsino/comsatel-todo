@@ -29,23 +29,19 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://comsatel-tasks.web.app/">
+  <a href="https://comsatel-tasks.web.app/" target="_blank">
     <img src="https://res.cloudinary.com/dwkfj5sxb/image/upload/v1656606163/CLASICO/favicon_j4mpbw.svg" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">COMSATEL TASKS</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    Una aplicación web pensada en móvil para gestionar tus tareas cotidianas.
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Visitalo aqui!</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+   
   </p>
 </div>
 
@@ -80,18 +76,12 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## Acerca del proyecto
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://comsatel-tasks.web.app/)
 
 
-Este proyecto es una prueba técnca.
-Esta aplicación web está hecha para gestionar tareas diarias
-
-Funcionalidades del proyecto:
-* Permite registrar tareas cotidianas
-* Permite eliminar y editar tareas creadas
-* Permite marcar una tarea como completada
+Esta aplicación web está hecha para gestionar tareas diarias.
 
 Requerimientos funcionales del proyecto:
 * La aplicacion  permite registrar tareas
@@ -101,15 +91,14 @@ Requerimientos funcionales del proyecto:
 
 
 Requerimientos no funcionales del proyecto:
-* Todas las tareas creadas se archivan, nunca se eliminan
+* Todas las tareas creadas se archivan a las 12:00 pm
 * Todas las tareas incompeltas se archivan al final del dia
-* Los colores de la aplicacion solo son 3
+* Los colores de la aplicacion solo son 4
 
 
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+<!-- Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template! -->
 
-Use the `BLANK_README.md` to get started.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -119,7 +108,7 @@ Use the `BLANK_README.md` to get started.
 
 Para el desarrollo de este proyecto se utilizo lenguajes deprogramacion, frameworks, librerias y servicios. Aqui el listado.
 
-* [React.js](https://reactjs.org/)
+* [React.js](https://reactjs.org/) -- Framework para construir interfaces
 * [Spring Boot](https://spring.io/)
 * [Tailwind Css](https://tailwindcss.com/)
 * [Planetscale](https://planetscale.com/)
@@ -264,4 +253,4 @@ Use this space to list resources you find helpful and would like to give credit 
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: https://res.cloudinary.com/dwkfj5sxb/image/upload/v1656607041/mobile-comsatel-task_tbt8uq.png
