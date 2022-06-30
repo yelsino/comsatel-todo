@@ -108,43 +108,48 @@ Requerimientos no funcionales del proyecto:
 
 Para el desarrollo de este proyecto se utilizo lenguajes deprogramacion, frameworks, librerias y servicios. Aqui el listado.
 
-* [React.js](https://reactjs.org/) -- Framework para construir interfaces
-* [Spring Boot](https://spring.io/)
-* [Tailwind Css](https://tailwindcss.com/)
-* [Planetscale](https://planetscale.com/)
-* [Typescript](https://www.typescriptlang.org/)
-* [Java](https://www.java.com/es/)
+* [React.js](https://reactjs.org/) -- Framework para construir interfaces con javascript
+* [Spring Boot](https://spring.io/) -- Framework para construir api-rest y proyectos web en java
+* [Tailwind Css](https://tailwindcss.com/) -- Framework para estilizar interfaces basado en mini clases
+* [Planetscale](https://planetscale.com/) -- Servicios web para alojar base de datos mysql
+* [Typescript](https://www.typescriptlang.org/) -- Lenguaje de programacion para dar superpoder a javascript
+* [Java](https://www.java.com/es/)  -- Lenguaje de programación de alto nivel orientado a objetos
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Getting Started - ¿Como ejecutar en local?
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Para obtener una copia del proyecto localmente, debe seguir estos pasos
 
-### Prerequisites
+### Pre requisitos
 
-This is an example of how to list things you need to use the software and how to install them.
+Para poder compilar el proyecto, asegurese tener instalado lo siguiente:
+
+* [Nodejs](https://nodejs.org/es/) -- Escoja una version LTS
+* [Java jdk](https://www.oracle.com/in/java/technologies/javase/jdk11-archive-downloads.html)
+* [Gestor Mysql](https://dev.mysql.com/downloads/mysql/)
+
+Ejecute esto en su terminal
 * npm
   ```sh
   npm install npm@latest -g
   ```
 
-### Installation
+### Instalación del proyeco
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+_Aqui los pasos para ejecutar el proyecoto._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Abra una terminal como cmd, git bash, etc.
+2. Clona el proyecto desde github 
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/yelsino/comsatel-todo.git
    ```
-3. Install NPM packages
+3. Instala los paquetes yarn del proyecto,
    ```sh
-   npm install
+   yarn install
    ```
 4. Enter your API in `config.js`
    ```js
