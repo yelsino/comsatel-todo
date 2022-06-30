@@ -29,7 +29,8 @@ export const taskReducer = (state: TaskState, action: TaskAction): TaskState => 
         case 'CREATE_TASK':
             return {
                 ...state,
-                todayTasks: [action.payload, ...state.todayTasks,],
+                todayTasks: [...state.todayTasks, action.payload],
+                // tasks: [action.payload, ...state.tasks]
             }
         case 'UPDATE_TASK':
             return {

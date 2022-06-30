@@ -49,7 +49,7 @@ export const TaskProvider = ({ children }: Props) => {
     // tareas faltantes de hoy
     const getTasksToday = (tasks: Task[]) => {
         const missingTasks = tasks.filter(({ createdAt }) => {
-            return formatDate(new Date(), 'L') === formatDate(createdAt ? createdAt : '', 'L');
+            return formatDate(new Date(), 'L') === formatDate(createdAt as Date, 'L');
         });
         return missingTasks;
     }

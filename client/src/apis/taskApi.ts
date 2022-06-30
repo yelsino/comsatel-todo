@@ -5,7 +5,7 @@ import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 // http://localhost:8004
 // https://spring-boot-tasks.herokuapp.com
 
-const baseURL = 'http://localhost:8004/tasks';
+const baseURL = 'https://spring-boot-tasks.herokuapp.com/tasks';
 
 const taskApi = axios.create({
     baseURL: baseURL,
