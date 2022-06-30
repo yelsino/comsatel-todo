@@ -2,8 +2,6 @@ import { createContext } from "react";
 import { Task } from "../../interfaces/Tasks";
 import { TaskAction } from "./TaskReducer";
 
-
-
 export interface TaskContextProps {
     isLoading: boolean;
     tasks: Task[];
@@ -18,7 +16,6 @@ export interface TaskContextProps {
     cleanTableTask: () => Promise<boolean>;
     selectConfirmTask: (task: Task | null) => void;
     dispatch: React.Dispatch<TaskAction>
-
 }
 
 export const TaskContext = createContext<TaskContextProps>({} as TaskContextProps);

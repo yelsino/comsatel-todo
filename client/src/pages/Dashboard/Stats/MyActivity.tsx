@@ -8,14 +8,13 @@ interface Props {
 
 export const MyActivity = ({ tasksByDays }: Props) => {
 
+  // create a array with 7 elements and fill it with [string, Task[]]
   const sevenDays = Array.from(Array(7).keys()).map(i => [moment().subtract(i, "days").format("YYYY-MM-DD"), [{ status: false }]] as [string, Task[]]);
-  // create a array with 7 elements and fill it with 0
 
   const totalbyday = 7 - tasksByDays.slice(-7).length
 
   return (
     <div className="col-span-2  rounded-full p-5 flex font-poppins gap-x-5 items-center bg-primary-100">
-
 
       <div className="flex flex-col items-center text-secondary-200 font-bold text-sm">
         <span>My</span>

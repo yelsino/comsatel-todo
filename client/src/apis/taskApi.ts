@@ -1,10 +1,14 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 
-const baseUrl = 'http://localhost:8004/tasks';
-// axios.defaults.headers.common['Accept'] = 'application/json';
+
+
+// http://localhost:8004
+// https://spring-boot-tasks.herokuapp.com
+
+const baseURL = 'http://localhost:8004/tasks';
 
 const taskApi = axios.create({
-    baseURL: baseUrl,
+    baseURL: baseURL,
     headers: {
         Accept: 'application/json',
     },

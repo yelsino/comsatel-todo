@@ -1,6 +1,3 @@
-// import { IconFire } from "../Atoms/Icons";
-import moment from "moment";
-import { useEffect, useState } from "react";
 import { SubTitle } from "../../../components/Atoms/SubTitle";
 import { useStats } from "../../../hooks/useStats";
 import { Task } from "../../../interfaces/Tasks";

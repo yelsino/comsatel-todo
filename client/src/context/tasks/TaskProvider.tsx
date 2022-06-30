@@ -33,7 +33,7 @@ export const TaskProvider = ({ children }: Props) => {
     const [state, dispatch] = useReducer(taskReducer, INITIAL_STATE)
 
     const getAllTasks = () => {
-        taskApi.get('/').then(res => {
+        taskApi.get('').then(res => {
             dispatch({
                 type: 'GET_ALL_TASKS',
                 payload: res.data
@@ -55,7 +55,7 @@ export const TaskProvider = ({ children }: Props) => {
     }
     // const create a task
     const createTask = async (task: Task) => {
-        const newTask = await taskApi.post('/', task);
+        const newTask = await taskApi.post('', task);
         dispatch({ type: 'CREATE_TASK', payload: newTask.data });
         getAllTasks()
 
@@ -76,8 +76,6 @@ export const TaskProvider = ({ children }: Props) => {
     const cleanTableTask = async (): Promise<boolean> => {
         dispatch({ type: 'IS_LOADING', payload: true });
         const res = await taskApi.delete('/clean');
-        // console.log(res);
-
         dispatch({ type: 'CLEAN_TABLE_TASK', payload: res.data });
         return res.status === 200 ? true : false;
     }
