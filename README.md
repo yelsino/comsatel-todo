@@ -29,8 +29,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://comsatel-tasks.web.app/">
+    <img src="https://res.cloudinary.com/dwkfj5sxb/image/upload/v1656606163/CLASICO/favicon_j4mpbw.svg" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Best-README-Template</h3>
