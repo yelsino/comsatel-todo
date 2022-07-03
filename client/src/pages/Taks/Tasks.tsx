@@ -34,39 +34,39 @@ const Tasks = () => {
     <div className="flex flex-col gap-y-5">
       <Header link="/estadisticas" text="Tareas" />
 
-      <LayoutGroup>
-        <motion.div
-          layout
-          className="flex flex-col gap-y-3 "
-        >
-          <InputText />
-          <div className="w-full flex flex-col gap-y-2 text-text-100">
-            <SubTitle text="Tareas pendientes" />
-            <div className="flex flex-col gap-y-2 overflow-y-scroll h-[calc(100vh-220px)] pb-20">
-              {
-                todayTasks.map((task, index) => (
-                  <ItemTask
-                    key={index}
-                    task={task}
-                    updateTask={updateTask}
-                    selectTask={selectTask}
-                    toggleModal={toggleModal}
-                    selectConfirmTask={selectConfirmTask}
-                  />
-                ))
-              }
+      {/* <LayoutGroup> */}
+      <motion.div
+        // layout
+        className="flex flex-col gap-y-3 "
+      >
+        <InputText />
+        <div className="w-full flex flex-col gap-y-2 text-text-100">
+          <SubTitle text="Tareas pendientes" />
+          <div className="flex flex-col gap-y-2 overflow-y-scroll h-[calc(100vh-220px)] pb-20">
+            {
+              todayTasks.map((task, index) => (
+                <ItemTask
+                  key={index}
+                  task={task}
+                  updateTask={updateTask}
+                  selectTask={selectTask}
+                  toggleModal={toggleModal}
+                  selectConfirmTask={selectConfirmTask}
+                />
+              ))
+            }
 
-              {
-                todayTasks.length === 0 &&
-                <div className=" text-text-200">
-                  No hay ninuna tarea pendiente, recuerda que todas las tareas creadas hoy, serán archivadas a las 12:00 pm
-                </div>
-              }
-            </div>
-
+            {
+              todayTasks.length === 0 &&
+              <div className=" text-text-200">
+                No hay ninuna tarea pendiente, recuerda que todas las tareas creadas hoy, serán archivadas a las 12:00 pm
+              </div>
+            }
           </div>
-        </motion.div>
-      </LayoutGroup>
+
+        </div>
+      </motion.div>
+      {/* </LayoutGroup> */}
 
       <Modal
         title={'¿Vas a eliminar esta tarea?'}
