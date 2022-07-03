@@ -42,7 +42,7 @@ const Tasks = () => {
           <InputText />
           <div className="w-full flex flex-col gap-y-2 text-text-100">
             <SubTitle text="Tareas pendientes" />
-            <div className="flex flex-col gap-y-2 overflow-y-scroll h-[calc(100vh-400px)]">
+            <div className="flex flex-col gap-y-2 overflow-y-scroll h-[calc(100vh-220px)] pb-20">
               {
                 todayTasks.map((task, index) => (
                   <ItemTask

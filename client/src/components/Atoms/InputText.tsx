@@ -11,7 +11,7 @@ export const InputText = () => {
     const inputRef = useRef<HTMLInputElement>(null);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        if (text.length >= 30) return setText(text.substring(0, 29));
+        if (text.length >= 50) return setText(text.substring(0, 49));
         setText(e.target.value)
     }
 
@@ -65,7 +65,7 @@ export const InputText = () => {
                         type="text"
                         onKeyDown={handleKeyPress}
                         placeholder="Dijite su nueva tarea"
-                        className="px-5 py-3 outline-none rounded-lg w-full"
+                        className="px-5 py-3 outline-none rounded-lg w-full pr-10"
                         value={text}
                         onChange={handleChange} />
                     {text && <motion.button

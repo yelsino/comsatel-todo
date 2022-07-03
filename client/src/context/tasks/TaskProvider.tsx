@@ -58,7 +58,6 @@ export const TaskProvider = ({ children }: Props) => {
         const newTask = await taskApi.post('', task);
         dispatch({ type: 'CREATE_TASK', payload: newTask.data });
         getAllTasks()
-
     }
 
     const updateTask = async (task: Task) => {
@@ -87,8 +86,6 @@ export const TaskProvider = ({ children }: Props) => {
     const selectConfirmTask = (task: Task | null) => {
         dispatch({ type: 'CONFIRM_TASK', payload: task });
     }
-
-
 
 
     useEffect(() => {
