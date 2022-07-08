@@ -207,4 +207,4 @@ Gracias a estas librerias pude construir este proyecto!
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [linkedin-url]: https://www.linkedin.com/in/yelsin-caso-alanya-511824210/
-[product-screenshot]: https://res.cloudinary.com/dwkfj5sxb/image/upload/v1656607041/mobile-comsatel-task_tbt8uq.png
+[product-screenshot]: https://res.cloudinary.com/dwkfj5sxb/image/upload/v1656948862/SCREEN-MY-APPS/mobile-comsatel-task_jbxruj.png
